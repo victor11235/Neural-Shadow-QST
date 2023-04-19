@@ -19,3 +19,6 @@ A large portion of the code is directly adopted from neural error mitigation (NE
 ## Demo Notebook
 
 `NSQST_GHZ_demo.ipynb`: Contains a demo of applying NSQST to a phase-shifted 6-qubit GHZ state, in the noiseless case.
+
+## Dependencies
+This code works on Python (3.10.9) with Torch (2.0.0), NumPy (1.23.5), and Qiskit (0.42.1).
