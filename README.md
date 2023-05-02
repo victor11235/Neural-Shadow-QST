@@ -12,7 +12,7 @@ A large portion of the code is directly adopted from neural error mitigation (NE
 
 ## NSQST Code
 
-`Helper_fun.py`: Contains useful helper functions, including random Clifford generator, constructing GHZ state circuit, basis state samples to corresponding stabilizer state amplitude etc. The stabilizer state amplitude calculation is currently done without the efficient stabilizer formalism, which means that the current implementation will only work for small system size (reproducing 6-qubit numerical results). Stabilizer formalism will be included in future updates. Some other modifications are also needed to make classical post-processing scalable, see Appendix D of the paper.
+`Helper_fun.py`: Contains useful helper functions, including random Clifford generator, constructing GHZ state circuit, basis state samples to corresponding stabilizer state amplitude etc. The stabilizer state amplitude calculation is currently done without the efficient stabilizer formalism, which means that the current implementation will only work for small system size (reproducing 6-qubit numerical results). Stabilizer formalism will be included in future updates. Other modifications may also be needed to make NSQST scalable, see Appendix D of the paper.
 
 `NSQST_Trainer`: Implementation of the NSQST algorithm.
 
