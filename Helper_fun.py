@@ -61,6 +61,22 @@ def samples_to_log_clifford_amplitudes(clifford_dense, samples, weights):
     
     return np.array(clifford_log_amplitudes), weights_new, unique_samples_new
 
+'''
+Similar to the function above, except that we obtain the amplitudes (not the log) this time
+'''
+def samples_to_clifford_amplitudes(clifford_dense, samples, weights):
+    samples_array = samples.numpy()
+    
+    index_list = []
+    clifford_amplitudes = []
+    for i in range(len(samples_array)):
+        sample_i = samples_array[i]
+        index = int("".join(str(x) for x in sample_i), 2)
+
+        clifford_amplitudes.append( clifford_dense[index] ) 
+    
+    return np.array(clifford_amplitudes), weights, samples
+
 def chunker(seq, size):
     return (seq[pos:pos + size] for pos in range(0, len(seq), size))
 
